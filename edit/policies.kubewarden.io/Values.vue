@@ -1,13 +1,13 @@
 <script>
-import { _CREATE, _VIEW } from '@/shell/config/query-params';
-import { SCHEMA } from '@/shell/config/types';
-import { createYaml } from '@/shell/utils/create-yaml';
-import { clone } from '@/shell/utils/object';
+import { _CREATE, _VIEW } from '@shell/config/query-params';
+import { SCHEMA } from '@shell/config/types';
+import { createYaml } from '@shell/utils/create-yaml';
+import { clone } from '@shell/utils/object';
 
-import ButtonGroup from '@/shell/components/ButtonGroup';
-import ResourceCancelModal from '@/shell/components/ResourceCancelModal';
-import Tabbed from '@/shell/components/Tabbed';
-import YamlEditor, { EDITOR_MODES } from '@/shell/components/YamlEditor';
+import ButtonGroup from '@shell/components/ButtonGroup';
+import ResourceCancelModal from '@shell/components/ResourceCancelModal';
+import Tabbed from '@shell/components/Tabbed';
+import YamlEditor, { EDITOR_MODES } from '@shell/components/YamlEditor';
 
 const VALUES_STATE = {
   FORM: 'FORM',

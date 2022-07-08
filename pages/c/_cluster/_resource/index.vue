@@ -2,8 +2,8 @@
 import ResourceList from '@shell/components/ResourceList/index.vue';
 
 export default {
-  name:       'KubewardenResourceList',
-  components: { ResourceList }
+  name:       'KubewardenResourcedList',
+  components: { ResourceList },
 };
 </script>
 

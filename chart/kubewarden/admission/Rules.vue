@@ -1,11 +1,11 @@
 <script>
-import { _CREATE, _VIEW } from '@/shell/config/query-params';
-import { removeAt } from '@/shell/utils/array';
+import { _CREATE, _VIEW } from '@shell/config/query-params';
+import { removeAt } from '@shell/utils/array';
 
 import Rule from './Rule';
 
-import Tab from '@/shell/components/Tabbed/Tab';
-import Tabbed from '@/shell/components/Tabbed';
+import Tab from '@shell/components/Tabbed/Tab';
+import Tabbed from '@shell/components/Tabbed';
 
 export default {
   name: 'Rules',

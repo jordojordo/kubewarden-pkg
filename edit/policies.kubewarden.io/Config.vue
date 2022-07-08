@@ -1,7 +1,7 @@
 <script>
-import { _CREATE, _VIEW } from '@/shell/config/query-params';
+import { _CREATE, _VIEW } from '@shell/config/query-params';
 
-import Values from '@/pkg/kubewarden/edit/policies.kubewarden.io/Values';
+import Values from './Values.vue';
 
 export default {
   name: 'Config',

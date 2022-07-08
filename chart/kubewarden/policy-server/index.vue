@@ -1,12 +1,12 @@
 <script>
-import { _CREATE } from '@/shell/config/query-params';
+import { _CREATE } from '@shell/config/query-params';
 
-import Tab from '@/shell/components/Tabbed/Tab';
+import Tab from '@shell/components/Tabbed/Tab';
 
-import General from '@/pkg/kubewarden/chart/kubewarden/policy-server/General';
-import Labels from '@/pkg/kubewarden/chart/kubewarden/policy-server/Labels';
-import Registry from '@/pkg/kubewarden/chart/kubewarden/policy-server/Registry/Index';
-import Verification from '@/pkg/kubewarden/chart/kubewarden/policy-server/Verification';
+import General from './General';
+import Labels from './Labels';
+import Registry from './Registry/Index';
+import Verification from './Verification';
 
 export default {
   props: {

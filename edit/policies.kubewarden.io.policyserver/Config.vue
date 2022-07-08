@@ -1,9 +1,10 @@
 <script>
-import { _VIEW } from '@/shell/config/query-params';
-import { saferDump } from '@/shell/utils/create-yaml';
+import { _VIEW } from '@shell/config/query-params';
+import { saferDump } from '@shell/utils/create-yaml';
 
-import Loading from '@/shell/components/Loading';
-import Values from '@/pkg/kubewarden/edit/policies.kubewarden.io.policyserver/Values';
+import Loading from '@shell/components/Loading';
+
+import Values from './Values';
 
 export default {
   name: 'Config',

@@ -1,7 +1,7 @@
 <script>
-import { _CREATE } from '@/shell/config/query-params';
+import { _CREATE } from '@shell/config/query-params';
 
-import { LabeledInput } from '@/pkg/rancher-components/src/components/Form/LabeledInput';
+import { LabeledInput } from '@components/Form/LabeledInput';
 
 export default {
   props: {

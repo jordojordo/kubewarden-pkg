@@ -1,8 +1,8 @@
 <script>
-import { Banner } from '@/pkg/rancher-components/src/components/Banner';
-import Loading from '@/shell/components/Loading';
-import ResourceTable from '@/shell/components/ResourceTable';
-import Select from '@/shell/components/form/Select';
+import { Banner } from '@components/Banner';
+import Loading from '@shell/components/Loading';
+import ResourceTable from '@shell/components/ResourceTable';
+import Select from '@shell/components/form/Select';
 
 export default {
   components: {

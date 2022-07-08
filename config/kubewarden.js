@@ -1,7 +1,5 @@
-import { STATE, NAME as NAME_HEADER } from '@/shell/config/table-headers';
-import { KUBEWARDEN, KUBEWARDEN_PRODUCT_GROUP, KUBEWARDEN_PRODUCT_NAME } from '@/pkg/kubewarden/types';
-
-import { createKubewardenRoute, rootKubewardenRoute } from '../utils/custom-routing';
+import { STATE, NAME as NAME_HEADER } from '@shell/config/table-headers';
+import { KUBEWARDEN, KUBEWARDEN_PRODUCT_GROUP } from '../types';
 
 export const CHART_NAME = 'rancher-kubewarden';
 
@@ -27,7 +25,7 @@ export const RELATED_POLICY_SUMMARY = {
 export function init($plugin, store) {
   const {
     product,
-    configureType,
+    basicType,
     spoofedType,
     weightType,
     headers,
@@ -40,51 +38,22 @@ export function init($plugin, store) {
     SPOOFED
   } = KUBEWARDEN;
 
-  //
-
-  //
-  // something weird is happening here. the type isn't being created as it should be
-  // I can see it in the vuex store cache but that's all. maybe it has something to do
-  // with the routes?
-  // I also can no longer see the plugin listed in the plugins page, which it was an hour ago...
-  //
-
-  //
   product({
     ifHaveGroup:         KUBEWARDEN_PRODUCT_GROUP,
-    category:            KUBEWARDEN_PRODUCT_NAME,
-    // ifHaveGroup:         /^(.*\.)*kubewarden\.io$/,
     inStore:             'cluster',
     icon:                'kubewarden',
+    removeable:          false,
     showNamespaceFilter: true,
-    to:                  createKubewardenRoute('resource', { resource: POLICY_SERVER }),
   });
 
-  configureType(POLICY_SERVER, {
-    isCreatable: true,
-    isEditable:  true,
-    isRemovable: true,
-    canYaml:     true,
-    customRoute: createKubewardenRoute('resource', { resource: POLICY_SERVER })
-  });
+  basicType([
+    POLICY_SERVER,
+    ADMISSION_POLICY,
+    CLUSTER_ADMISSION_POLICY
+  ]);
+
   weightType(POLICY_SERVER, 99, true);
-
-  configureType(CLUSTER_ADMISSION_POLICY, {
-    isCreatable: true,
-    isEditable:  true,
-    isRemovable: true,
-    canYaml:     true,
-    customRoute: createKubewardenRoute('resource', { resource: CLUSTER_ADMISSION_POLICY })
-  });
   weightType(CLUSTER_ADMISSION_POLICY, 98, true);
-
-  configureType(ADMISSION_POLICY, {
-    isCreatable: true,
-    isEditable:  true,
-    isRemovable: true,
-    canYaml:     true,
-    customRoute: createKubewardenRoute('resource', { resource: ADMISSION_POLICY })
-  });
   weightType(ADMISSION_POLICY, 97, true);
 
   // These are policies from the Policy Hub

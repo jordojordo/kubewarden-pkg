@@ -1,5 +1,5 @@
 <script>
-import KeyValue from '@/pkg/kubewarden/components/form/KeyValue';
+import KeyValue from '../form/KeyValue';
 import Question from './Question';
 
 export default {

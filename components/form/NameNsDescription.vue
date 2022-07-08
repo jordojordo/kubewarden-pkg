@@ -1,13 +1,13 @@
 <script>
 import { mapGetters } from 'vuex';
-import { get, set } from '@/shell/utils/object';
-import { sortBy } from '@/shell/utils/sort';
-import { NAMESPACE } from '@/shell/config/types';
-import { _VIEW, _EDIT } from '@/shell/config/query-params';
-import { DESCRIPTION } from '@/shell/config/labels-annotations';
-import { LabeledInput } from '@/pkg/rancher-components/src/components/Form/LabeledInput';
+import { get, set } from '@shell/utils/object';
+import { sortBy } from '@shell/utils/sort';
+import { NAMESPACE } from '@shell/config/types';
+import { _VIEW, _EDIT } from '@shell/config/query-params';
+import { DESCRIPTION } from '@shell/config/labels-annotations';
 
-import InputWithSelect from '@/shell/components/form/InputWithSelect';
+import InputWithSelect from '@shell/components/form/InputWithSelect';
+import { LabeledInput } from '@components/Form/LabeledInput';
 
 export function normalizeName(str) {
   return (str || '')

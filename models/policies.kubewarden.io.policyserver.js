@@ -1,7 +1,7 @@
-import KubewardenModel from '@/pkg/kubewarden/plugins/kubewarden/policy-class';
-import { ADMISSION_POLICY_STATE } from '@/pkg/kubewarden/config/kubewarden';
-import { KUBEWARDEN } from '@/pkg/kubewarden/types';
-import { POD } from '@/shell/config/types';
+import { POD } from '@shell/config/types';
+import KubewardenModel from '../plugins/kubewarden/policy-class';
+import { ADMISSION_POLICY_STATE } from '../config/kubewarden';
+import { KUBEWARDEN } from '../types';
 
 export const RELATED_HEADERS = [
   ADMISSION_POLICY_STATE,

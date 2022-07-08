@@ -1,7 +1,7 @@
 <script>
-import { _VIEW } from '@/shell/config/query-params';
-import { removeAt } from '@/shell/utils/array';
-import { isEmpty } from '@/shell/utils/object';
+import { _VIEW } from '@shell/config/query-params';
+import { removeAt } from '@shell/utils/array';
+import { isEmpty } from '@shell/utils/object';
 
 import Authority from './Authority';
 

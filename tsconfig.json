@@ -25,41 +25,23 @@
     ],
     "paths": {
       "@shell/core/*": [
-        "../../shell/core/*"
+        "../../node_modules/@rancher/shell/core/*"
       ],
       "@shell/config/*": [
-        "../../shell/config/*"
+        "../../node_modules/@rancher/shell/config/*"
       ],
       "@shell/store/*": [
-        "../../shell/store/*"
+        "../../node_modules/@rancher/shell/store/*"
       ],
-      "@shell/plugins/*": [
-        "../../shell/plugins/*"
-      ],
-      "@shell/utils/*": [
-        "../../shell/utils/*"
-      ],
-      "@shell/models/*": [
-        "../../shell/models/*"
-      ],
-      "@components/*": [
-        "../../pkg/rancher-components/*"
-      ],
-      "@rancher/*": [
-        "../../shell/*"
-      ],
-      "@/pkg/kubewarden/*": [
-        "./*"
-      ]
     }
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     "**/*.vue",
-    "../../shell/types/*.d.ts",
-    "../../shell/core/*.ts",
-    "../../shell/config/**/*.js"
+    "../../node_modules/@rancher/shell/types/*.d.ts",
+    "../../node_modules/@rancher/shell/core/*.ts",
+    "../../node_modules/@rancher/shell/config/**/*.js"
   ],
   "exclude": [
     "node_modules"

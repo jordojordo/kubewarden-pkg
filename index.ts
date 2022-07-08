@@ -2,7 +2,6 @@ import { importTypes } from '@rancher/auto-import';
 import { IPlugin } from '@shell/core/types';
 import kubewardenRoutes from './routes/kubewarden-routes';
 import kubewardenStore from './store';
-// import { KUBEWARDEN_PRODUCT_NAME } from '@/pkg/kubewarden/types';
 
 // Init the package
 export default function(plugin: IPlugin) {

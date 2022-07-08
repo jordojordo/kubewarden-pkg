@@ -1,9 +1,9 @@
 <script>
+import { stringify } from '@shell/utils/error';
 
-import AsyncButton from '@/shell/components/AsyncButton';
-import { Banner } from '@/pkg/rancher-components/src/components/Banner';
-import Loading from '@/shell/components/Loading';
-import { stringify } from '@/shell/utils/error';
+import AsyncButton from '@shell/components/AsyncButton';
+import Loading from '@shell/components/Loading';
+import { Banner } from '@components/Banner';
 
 /*
 Wizard accepts an array of steps (see props), and creates named slots for each step.

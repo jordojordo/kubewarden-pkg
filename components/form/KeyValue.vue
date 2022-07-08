@@ -1,15 +1,17 @@
 <script>
 import debounce from 'lodash/debounce';
-import { typeOf } from '@/shell/utils/sort';
-import { removeAt, removeObject } from '@/shell/utils/array';
-import { asciiLike } from '@/shell/utils/string';
-import { base64Encode, base64Decode } from '@/shell/utils/crypto';
-import { downloadFile } from '@/shell/utils/download';
-import { TextAreaAutoGrow } from '@/pkg/rancher-components/src/components/Form/TextArea';
-import { get } from '@/shell/utils/object';
-import Select from '@/shell/components/form/Select';
-import FileSelector from '@/shell/components/form/FileSelector';
-import { _EDIT, _VIEW } from '@/shell/config/query-params';
+
+import { _EDIT, _VIEW } from '@shell/config/query-params';
+import { typeOf } from '@shell/utils/sort';
+import { removeAt, removeObject } from '@shell/utils/array';
+import { asciiLike } from '@shell/utils/string';
+import { base64Encode, base64Decode } from '@shell/utils/crypto';
+import { downloadFile } from '@shell/utils/download';
+import { get } from '@shell/utils/object';
+import Select from '@shell/components/form/Select';
+
+import FileSelector from '@shell/components/form/FileSelector';
+import { TextAreaAutoGrow } from '@components/Form/TextArea';
 
 export default {
   components: {

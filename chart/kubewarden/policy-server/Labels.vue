@@ -1,7 +1,7 @@
 <script>
-import { _CREATE } from '@/shell/config/query-params';
+import { _CREATE } from '@shell/config/query-params';
 
-import KeyValue from '@/pkg/kubewarden/components/form/KeyValue';
+import KeyValue from '../../../components/form/KeyValue';
 
 export default {
   props: {

@@ -1,11 +1,11 @@
 <script>
-import { MODE_MAP, TRACE_HEADERS, OPERATION_MAP } from '@/pkg/kubewarden/plugins/kubewarden/policy-class';
-import { KUBEWARDEN } from '@/pkg/kubewarden/types';
-import { isEmpty } from '@/shell/utils/object';
+import { MODE_MAP, TRACE_HEADERS, OPERATION_MAP } from '../plugins/kubewarden/policy-class';
+import { KUBEWARDEN } from '../types';
+import { isEmpty } from '@shell/utils/object';
 
-import { BadgeState } from '@/pkg/rancher-components/src/components/BadgeState';
-import { Banner } from '@/pkg/rancher-components/src/components/Banner';
-import SortableTable from '@/shell/components/SortableTable';
+import { BadgeState } from '@components/BadgeState';
+import { Banner } from '@components/Banner';
+import SortableTable from '@shell/components/SortableTable';
 
 export default {
   props: {

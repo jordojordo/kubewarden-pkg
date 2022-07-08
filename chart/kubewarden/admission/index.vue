@@ -1,12 +1,12 @@
 <script>
 import isEmpty from 'lodash/isEmpty';
-import { _CREATE } from '@/shell/config/query-params';
+import { _CREATE } from '@shell/config/query-params';
 
-import General from '@/pkg/kubewarden/chart/kubewarden/admission/General';
-import Rules from '@/pkg/kubewarden/chart/kubewarden/admission/Rules';
+import Questions from '@shell/components/Questions';
+import Tab from '@shell/components/Tabbed/Tab';
 
-import Questions from '@/shell/components/Questions';
-import Tab from '@/shell/components/Tabbed/Tab';
+import General from './General';
+import Rules from './Rules';
 
 export default {
   props: {

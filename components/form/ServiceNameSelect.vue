@@ -1,8 +1,9 @@
 <script>
-import labeledFormElement from '@/shell/mixins/labeled-form-element';
-import LabeledSelect from '@/shell/components/form/LabeledSelect';
-import { Banner } from '@/pkg/rancher-components/src/components/Banner';
-import { _VIEW } from '@/shell/config/query-params';
+import { _VIEW } from '@shell/config/query-params';
+import labeledFormElement from '@shell/mixins/labeled-form-element';
+
+import LabeledSelect from '@shell/components/form/LabeledSelect';
+import { Banner } from '@components/Banner';
 
 export default {
   components: { LabeledSelect, Banner },

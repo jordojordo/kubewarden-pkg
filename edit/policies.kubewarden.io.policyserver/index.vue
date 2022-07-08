@@ -1,12 +1,12 @@
 <script>
 import { mapGetters } from 'vuex';
-import { _CREATE, _EDIT } from '@/shell/config/query-params';
-import { KUBEWARDEN } from '@/pkg/kubewarden/types';
-import CreateEditView from '@/shell/mixins/create-edit-view';
+import { _CREATE, _EDIT } from '@shell/config/query-params';
+import { KUBEWARDEN } from '../../types';
+import CreateEditView from '@shell/mixins/create-edit-view';
 
-import CruResource from '@/shell/components/CruResource';
-import Config from '@/pkg/kubewarden/edit/policies.kubewarden.io.policyserver/Config';
-import Create from '@/pkg/kubewarden/edit/policies.kubewarden.io.policyserver/Create';
+import CruResource from '@shell/components/CruResource';
+import Config from './Config';
+import Create from './Create';
 
 export default {
   components: {

@@ -1,7 +1,7 @@
 <script>
-import { _CREATE } from '@/shell/config/query-params';
+import { _CREATE } from '@shell/config/query-params';
 
-import Tabbed from '@/shell/components/Tabbed';
+import Tabbed from '@shell/components/Tabbed';
 
 export default {
   name: 'Values',

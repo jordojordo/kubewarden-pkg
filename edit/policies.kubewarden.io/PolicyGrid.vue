@@ -1,10 +1,10 @@
 <script>
-import { _CREATE, CATEGORY, SEARCH_QUERY } from '@/shell/config/query-params';
-import { CATEGORY_MAP, RESOURCE_MAP } from '@/pkg/kubewarden/plugins/kubewarden/policy-class';
-import { ensureRegex } from '@/shell/utils/string';
-import { sortBy } from '@/shell/utils/sort';
+import { _CREATE, CATEGORY, SEARCH_QUERY } from '@shell/config/query-params';
+import { CATEGORY_MAP, RESOURCE_MAP } from '../../plugins/kubewarden/policy-class';
+import { ensureRegex } from '@shell/utils/string';
+import { sortBy } from '@shell/utils/sort';
 
-import LabeledSelect from '@/shell/components/form/LabeledSelect';
+import LabeledSelect from '@shell/components/form/LabeledSelect';
 
 export default {
   props: {

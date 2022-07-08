@@ -1,15 +1,16 @@
 <script>
-import { KUBERNETES, PROJECT } from '@/shell/config/labels-annotations';
-import { FLEET, NAMESPACE, MANAGEMENT } from '@/shell/config/types';
-import ButtonGroup from '@/shell/components/ButtonGroup';
-import { BadgeState } from '@/pkg/rancher-components/src/components/BadgeState';
-import { Banner } from '@/pkg/rancher-components/src/components/Banner';
-import { get } from '@/shell/utils/object';
-import { NAME as FLEET_NAME } from '@/shell/config/product/fleet';
-import { HIDE_SENSITIVE } from '@/shell/store/prefs';
+import { KUBERNETES, PROJECT } from '@shell/config/labels-annotations';
+import { FLEET, NAMESPACE, MANAGEMENT } from '@shell/config/types';
+import { get } from '@shell/utils/object';
+import { NAME as FLEET_NAME } from '@shell/config/product/fleet';
+import { HIDE_SENSITIVE } from '@shell/store/prefs';
 import {
   AS, _DETAIL, _CONFIG, _YAML, MODE, _CREATE, _EDIT, _VIEW, _UNFLAG
-} from '@/shell/config/query-params';
+} from '@shell/config/query-params';
+
+import ButtonGroup from '@shell/components/ButtonGroup';
+import { Banner } from '@components/Banner';
+import { BadgeState } from '@components/BadgeState';
 
 export default {
   components: {

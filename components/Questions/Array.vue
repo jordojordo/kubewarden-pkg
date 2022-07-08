@@ -1,5 +1,5 @@
 <script>
-import ArrayList from '@/shell/components/form/ArrayList';
+import ArrayList from '@shell/components/form/ArrayList';
 import Question from './Question';
 
 export default {

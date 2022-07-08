@@ -1,17 +1,17 @@
 <script>
 import cloneDeep from 'lodash/cloneDeep';
 import merge from 'lodash/merge';
-import { _CREATE } from '@/shell/config/query-params';
-import { SCHEMA } from '@/shell/config/types';
-import CreateEditView from '@/shell/mixins/create-edit-view';
-import { createYaml } from '@/shell/utils/create-yaml';
-import { clone } from '@/shell/utils/object';
+import { _CREATE } from '@shell/config/query-params';
+import { SCHEMA } from '@shell/config/types';
+import CreateEditView from '@shell/mixins/create-edit-view';
+import { createYaml } from '@shell/utils/create-yaml';
+import { clone } from '@shell/utils/object';
 
-import Loading from '@/shell/components/Loading';
-import CruResource from '@/shell/components/CruResource';
-import Values from '@/pkg/kubewarden/edit/policies.kubewarden.io.policyserver/Values';
+import Loading from '@shell/components/Loading';
+import CruResource from '@shell/components/CruResource';
 
-import defaultPolicyServer from '@/pkg/kubewarden/questions/defaultPolicyServer.json';
+import defaultPolicyServer from '../../questions/defaultPolicyServer.json';
+import Values from './Values';
 
 export default {
   name: 'Create',

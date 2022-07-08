@@ -1,11 +1,11 @@
 <script>
-import { _CREATE, _EDIT } from '@/shell/config/query-params';
-import ChartMixin from '@/shell/mixins/chart';
-import CreateEditView from '@/shell/mixins/create-edit-view';
+import { _CREATE, _EDIT } from '@shell/config/query-params';
+import ChartMixin from '@shell/mixins/chart';
+import CreateEditView from '@shell/mixins/create-edit-view';
 
-import CruResource from '@/shell/components/CruResource';
-import Config from '@/pkg/kubewarden/edit/policies.kubewarden.io/Config';
-import Create from '@/pkg/kubewarden/edit/policies.kubewarden.io/Create';
+import CruResource from '@shell/components/CruResource';
+import Config from '../policies.kubewarden.io/Config';
+import Create from '../policies.kubewarden.io/Create';
 
 export default {
   name: 'AdmissionPolicy',

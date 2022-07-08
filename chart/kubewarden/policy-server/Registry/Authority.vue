@@ -1,9 +1,9 @@
 <script>
-import { _EDIT, _VIEW } from '@/shell/config/query-params';
-import { removeAt } from '@/shell/utils/array';
+import { _EDIT, _VIEW } from '@shell/config/query-params';
+import { removeAt } from '@shell/utils/array';
 
-import FileSelector, { createOnSelected } from '@/shell/components/form/FileSelector';
-import { LabeledInput } from '@/pkg/rancher-components/src/components/Form/LabeledInput';
+import FileSelector, { createOnSelected } from '@shell/components/form/FileSelector';
+import { LabeledInput } from '@components/Form/LabeledInput';
 
 export default {
   props: {

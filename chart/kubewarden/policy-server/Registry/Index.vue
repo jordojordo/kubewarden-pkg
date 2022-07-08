@@ -1,8 +1,8 @@
 <script>
-import { _CREATE } from '@/shell/config/query-params';
+import { _CREATE } from '@shell/config/query-params';
 
-import ArrayList from '@/shell/components/form/ArrayList';
-import { Banner } from '@/pkg/rancher-components/src/components/Banner';
+import ArrayList from '@shell/components/form/ArrayList';
+import { Banner } from '@components/Banner';
 
 import SourceAuthorities from './SourceAuthorities';
 

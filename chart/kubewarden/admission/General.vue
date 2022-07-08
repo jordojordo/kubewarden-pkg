@@ -1,12 +1,12 @@
 <script>
-import { _CREATE } from '@/shell/config/query-params';
-import { KUBEWARDEN } from '@/pkg/kubewarden/types';
-import { set } from '@/shell/utils/object';
+import { _CREATE } from '@shell/config/query-params';
+import { set } from '@shell/utils/object';
+import { KUBEWARDEN } from '../../../types';
 
-import NameNsDescription from '@/shell/components/form/NameNsDescription';
-import { LabeledInput } from '@/pkg/rancher-components/src/components/Form/LabeledInput';
-import LabeledSelect from '@/shell/components/form/LabeledSelect';
-import RadioGroup from '@/pkg/rancher-components/src/components/Form/Radio/RadioGroup';
+import NameNsDescription from '@shell/components/form/NameNsDescription';
+import LabeledSelect from '@shell/components/form/LabeledSelect';
+import { LabeledInput } from '@components/Form/LabeledInput';
+import { RadioGroup } from '@components/Form/Radio/RadioGroup';
 
 export default {
   name: 'General',

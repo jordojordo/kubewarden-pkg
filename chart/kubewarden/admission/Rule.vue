@@ -1,9 +1,9 @@
 <script>
 import flatMap from 'lodash/flatMap';
-import { _CREATE } from '@/shell/config/query-params';
-import { SCHEMA } from '@/shell/config/types';
+import { _CREATE } from '@shell/config/query-params';
+import { SCHEMA } from '@shell/config/types';
 
-import LabeledSelect from '@/shell/components/form/LabeledSelect';
+import LabeledSelect from '@shell/components/form/LabeledSelect';
 
 export default {
   name: 'Rule',

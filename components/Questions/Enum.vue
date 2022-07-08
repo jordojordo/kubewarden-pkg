@@ -1,5 +1,5 @@
 <script>
-import LabeledSelect from '@/shell/components/form/LabeledSelect';
+import LabeledSelect from '@shell/components/form/LabeledSelect';
 import Question from './Question';
 
 export default {

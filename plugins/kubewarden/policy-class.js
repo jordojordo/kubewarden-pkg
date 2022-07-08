@@ -1,12 +1,13 @@
-import SteveModel from '@/shell/plugins/steve/steve-class';
-import { KUBEWARDEN } from '@/pkg/kubewarden/types';
-import { SERVICE } from '@/shell/config/types';
-import { proxyUrlFromParts } from '@/shell/models/service';
-import { findBy, isArray } from '@/shell/utils/array';
-import { isEmpty } from '@/shell/utils/object';
 import filter from 'lodash/filter';
 import flatMap from 'lodash/flatMap';
 import matches from 'lodash/matches';
+
+import SteveModel from '@shell/plugins/steve/steve-class';
+import { KUBEWARDEN } from '../../types';
+import { SERVICE } from '@shell/config/types';
+import { proxyUrlFromParts } from '@shell/models/service';
+import { findBy, isArray } from '@shell/utils/array';
+import { isEmpty } from '@shell/utils/object';
 
 export const TRACE_HEADERS = [
   {
@@ -136,7 +137,7 @@ export default class KubewardenModel extends SteveModel {
 
   get componentForBadge() {
     if ( this.detailPageHeaderBadgeOverride ) {
-      return require(`@/pkg/kubewarden/components/formatter/PolicyStatus.vue`).default;
+      return require(`../../components/formatter/PolicyStatus.vue`).default;
     }
 
     return null;
@@ -293,7 +294,7 @@ export default class KubewardenModel extends SteveModel {
       // Spoofing the questions object from hard-typed questions json for each policy
       if ( found ) {
         const short = found.replace(`${ KUBEWARDEN.SPOOFED.POLICIES }.`, '');
-        const json = (await import(/* webpackChunkName: "policy-questions" */`@/pkg/kubewarden/questions/policy-questions/${ short }.json`)).default;
+        const json = (await import(/* webpackChunkName: "policy-questions" */`../../questions/policy-questions/${ short }.json`)).default;
 
         return json;
       }

@@ -4,16 +4,16 @@ import cloneDeep from 'lodash/cloneDeep';
 import merge from 'lodash/merge';
 import isEmpty from 'lodash/isEmpty';
 import { mapGetters } from 'vuex';
-import { NAMESPACE_SELECTOR } from '@/pkg/kubewarden/plugins/kubewarden/policy-class';
-import ChartMixin from '@/shell/mixins/chart';
-import CreateEditView from '@/shell/mixins/create-edit-view';
-import { _CREATE, CHART, REPO, REPO_TYPE } from '@/shell/config/query-params';
-import { KUBEWARDEN } from '@/pkg/kubewarden/types';
-import { saferDump } from '@/shell/utils/create-yaml';
-import { set } from '@/shell/utils/object';
+import { NAMESPACE_SELECTOR } from '../../plugins/kubewarden/policy-class';
+import ChartMixin from '@shell/mixins/chart';
+import CreateEditView from '@shell/mixins/create-edit-view';
+import { _CREATE, CHART, REPO, REPO_TYPE } from '@shell/config/query-params';
+import { KUBEWARDEN } from '../../types';
+import { saferDump } from '@shell/utils/create-yaml';
+import { set } from '@shell/utils/object';
 
-import Loading from '@/shell/components/Loading';
-import Wizard from '@/shell/components/Wizard';
+import Loading from '@shell/components/Loading';
+import Wizard from '@shell/components/Wizard';
 
 import PolicyGrid from './PolicyGrid';
 import Values from './Values';
@@ -48,7 +48,7 @@ export default ({
     if ( !this.chartValues ) {
       try {
         // Without importing this here the object would maintain the state
-        this.questions = await import(/* webpackChunkName: "questions-data" */ '@/pkg/kubewarden/questions/questions.json');
+        this.questions = await import(/* webpackChunkName: "questions-data" */ '../../questions/questions.json');
 
         const _questions = cloneDeep(JSON.parse(JSON.stringify(this.questions)));
 
@@ -59,7 +59,7 @@ export default ({
       }
     }
 
-    const defaultPolicy = require(`@/pkg/kubewarden/questions/policies/defaultPolicy.json`);
+    const defaultPolicy = require(`../../questions/policies/defaultPolicy.json`);
 
     this.yamlValues = saferDump(defaultPolicy);
 
@@ -195,7 +195,7 @@ export default ({
 
     policyQuestions(isCustom) {
       const shortType = !!isCustom ? 'defaultPolicy' : this.type?.replace(`${ KUBEWARDEN.SPOOFED.POLICIES }.`, '');
-      const match = require(`@/pkg/kubewarden/questions/policies/${ shortType }.json`);
+      const match = require(`../../questions/policies/${ shortType }.json`);
 
       if ( match ) {
         set(this.chartValues, 'policy', match);
@@ -203,7 +203,7 @@ export default ({
 
       // Spoofing the questions object from hard-typed questions json for each policy
       if ( match?.spec?.settings && !isEmpty(match.spec.settings) ) {
-        const questionsMatch = require(`@/pkg/kubewarden/questions/policy-questions/${ shortType }.json`);
+        const questionsMatch = require(`../../questions/policy-questions/${ shortType }.json`);
 
         if ( questionsMatch ) {
           set(this.chartValues.questions, 'questions', questionsMatch);

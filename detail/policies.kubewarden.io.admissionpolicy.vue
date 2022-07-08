@@ -1,16 +1,17 @@
 <script>
 import { mapGetters } from 'vuex';
 import flatMap from 'lodash/flatMap';
-import { _CREATE } from '@/shell/config/query-params';
-import { monitoringStatus } from '@/shell/utils/monitoring';
-import { dashboardExists } from '@/shell/utils/grafana';
-import CreateEditView from '@/shell/mixins/create-edit-view';
+import { _CREATE } from '@shell/config/query-params';
+import { monitoringStatus } from '@shell/utils/monitoring';
+import { dashboardExists } from '@shell/utils/grafana';
+import CreateEditView from '@shell/mixins/create-edit-view';
 
-import DashboardMetrics from '@/shell/components/DashboardMetrics';
-import Loading from '@/shell/components/Loading';
-import ResourceTabs from '@/shell/components/form/ResourceTabs';
-import Tab from '@/shell/components/Tabbed/Tab';
-import TraceTable from '@/pkg/kubewarden/components/TraceTable';
+import DashboardMetrics from '@shell/components/DashboardMetrics';
+import Loading from '@shell/components/Loading';
+import ResourceTabs from '@shell/components/form/ResourceTabs';
+import Tab from '@shell/components/Tabbed/Tab';
+
+import TraceTable from '../components/TraceTable';
 
 export default {
   name: 'AdmissionPolicy',
